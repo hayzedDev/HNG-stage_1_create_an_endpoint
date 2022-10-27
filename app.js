@@ -3,7 +3,7 @@ const app = express();
 
 app.use(express.json());
 
-app.get("/get-user-details", (req, res, next) => {
+app.get("/api/get-user-details", (req, res, next) => {
   const userObject = {
     slackUsername: "hayzedDev",
     backend: true,
