@@ -29,7 +29,9 @@ app.post("/api/calculate", (req, res, next) => {
     "multiply",
   ];
 
-  const enumIndex = enums.findIndex((enumEl) => operationType.includes(enumEl));
+  const enumIndex = enums.findIndex((enumEl) =>
+    operationType.toLowerCase().includes(enumEl)
+  );
   const result =
     enumIndex === 0 || enumIndex === 1
       ? x + y
